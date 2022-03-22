@@ -68,10 +68,15 @@
     }
 
     async function sendMsg() {
+      const mydate = getDateTime()
+      const myLoc = getLocation()
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([{
-          "type":"text",
-          "text":"Hello"
+          "type": "text",
+          "text": JSON.stringify({
+            "datetime": mydate,
+            "location": myLoc
+          })
         }])
       }
     }
@@ -108,8 +113,37 @@
       }
     }
 
+    // ----------------------------------------------------------------- //
+
+    function getDateTime() {
+      const date = new Date(Date.now())
+      return date.toLocaleString()
+    }
+
+    function getLocation() {
+      let lat
+      let lng
+      navigator.geolocation.getCurrentPosition(function (position) {
+        lat = position.coords.latitude
+        lng = position.coords.longitude
+        return JSON.stringify({ "lat": lat, "lng": lng })
+      })
+    }
+
+    // async function getIP() {
+    //   let ip = ''
+    //   fetch('https://api.ipify.org/?format=json')
+    //     .then(results => results.json())
+    //     .then(data => { ip = data.ip })
+
+    //   return ip
+    // }
+
+    // ----------------------------------------------------------------- //
+
+
     async function main() {
-      alert("สมบูรณ์19")
+      alert("Demo1")
       await liff.init({ liffId: "1656995427-Pn34wo4q" })
       getEnvironment()
       getUserProfile()
