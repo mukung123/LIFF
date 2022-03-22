@@ -70,12 +70,14 @@
     async function sendMsg() {
       const mydate = getDateTime()
       const myLoc = getLocation()
+      const myIP = getIP()
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([{
           "type": "text",
           "text": JSON.stringify({
             "datetime": mydate,
-            "location": "SS"
+            "location": myLoc,
+            "IP Adress": myIP
           })
         }])
       }
@@ -121,23 +123,30 @@
     }
 
     function getLocation() {
-      let lat
-      let lng
       navigator.geolocation.getCurrentPosition(function (position) {
-        lat = position.coords.latitude
-        lng = position.coords.longitude
-        return JSON.stringify({ "lat": lat, "lng": lng })
+        let lat = position.coords.latitude
+        let lng = position.coords.longitude
+        localStorage.setItem("MYLOC", JSON.stringify({"lat":lat, "lng":lng}))
       })
+      const theloc = localStorage.getItem("MYLOC")
+      localStorage.removeItem("MYLOC")
+      return theloc
     }
 
-    // async function getIP() {
-    //   let ip = ''
-    //   fetch('https://api.ipify.org/?format=json')
-    //     .then(results => results.json())
-    //     .then(data => { ip = data.ip })
 
-    //   return ip
-    // }
+    async function getIP() {
+      let ip = ''
+      await fetch('https://api.ipify.org/?format=json')
+        .then(results => results.json())
+        .then(data => { 
+          ip = data.ip 
+          localStorage.setItem("MYIP", ip)
+        })
+
+      const theip = localStorage.getItem("MYIP")
+      localStorage.removeItem("MYIP")
+      return theip
+    }
 
     // ----------------------------------------------------------------- //
 
