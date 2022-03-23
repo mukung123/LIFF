@@ -79,143 +79,145 @@
       }
 
       const flexful = {
-        "type": "bubble",
-        "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "box",
-              "layout": "horizontal",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "vertical",
-                  "contents": [
-                    {
-                      "type": "image",
-                      "size": "full",
-                      "aspectMode": "cover",
-                      "aspectRatio": "150:98",
-                      "gravity": "center",
-                      "url": "https://maps.googleapis.com/maps/api/staticmap?center=14.081287089777554,100.60466211681727&zoom=14&size=400x400&key=AIzaSyDPp1vNSk7TBo9FP7i1QPiB4Qq5tmNtk84"
-                    }
-                  ],
-                  "flex": 1
-                }
-              ]
-            },
-            {
-              "type": "box",
-              "layout": "horizontal",
-              "contents": [
-                {
-                  "type": "box",
-                  "layout": "vertical",
-                  "contents": [
-                    {
-                      "type": "image",
-                      "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip13.jpg",
-                      "aspectMode": "cover",
-                      "size": "full"
-                    }
-                  ],
-                  "cornerRadius": "100px",
-                  "width": "72px",
-                  "height": "72px"
-                },
-                {
-                  "type": "box",
-                  "layout": "vertical",
-                  "contents": [
-                    {
-                      "type": "text",
-                      "contents": [
-                        {
-                          "type": "span",
-                          "text": "Date",
-                          "weight": "bold",
-                          "color": "#000000"
-                        },
-                        {
-                          "type": "span",
-                          "text": "     "
-                        },
-                        {
-                          "type": "span",
-                          "text": "23/3/2565 12:52"
-                        }
-                      ],
-                      "size": "sm",
-                      "wrap": true
-                    },
-                    {
-                      "type": "text",
-                      "contents": [
-                        {
-                          "type": "span",
-                          "text": "Lat",
-                          "weight": "bold",
-                          "color": "#000000"
-                        },
-                        {
-                          "type": "span",
-                          "text": "     "
-                        },
-                        {
-                          "type": "span",
-                          "text": "12.4401216"
-                        }
-                      ],
-                      "size": "sm",
-                      "wrap": true
-                    },
-                    {
-                      "type": "text",
-                      "contents": [
-                        {
-                          "type": "span",
-                          "text": "Lng",
-                          "weight": "bold",
-                          "color": "#000000"
-                        },
-                        {
-                          "type": "span",
-                          "text": "     "
-                        },
-                        {
-                          "type": "span",
-                          "text": "100.456"
-                        }
-                      ],
-                      "size": "sm",
-                      "wrap": true
-                    },
-                    {
-                      "type": "box",
-                      "layout": "baseline",
-                      "contents": [
-                        {
-                          "type": "text",
-                          "text": "IP Adress : 1.460.12",
-                          "size": "sm",
-                          "color": "#bcbcbc"
-                        }
-                      ],
-                      "spacing": "sm",
-                      "margin": "md"
-                    }
-                  ]
-                }
-              ],
-              "spacing": "xl",
-              "paddingAll": "20px"
-            }
-          ],
-          "paddingAll": "0px"
+        "type": "flex",
+        "altText": "Flex Message",
+        "contents": {
+          "type": "bubble",
+          "body": {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "image",
+                        "size": "full",
+                        "aspectMode": "cover",
+                        "aspectRatio": "150:98",
+                        "gravity": "center",
+                        "url": "https://maps.googleapis.com/maps/api/staticmap?center=14.081287089777554,100.60466211681727&zoom=14&size=400x400&key=AIzaSyDPp1vNSk7TBo9FP7i1QPiB4Qq5tmNtk84"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "horizontal",
+                "contents": [
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "image",
+                        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip13.jpg",
+                        "aspectMode": "cover",
+                        "size": "full"
+                      }
+                    ],
+                    "cornerRadius": "100px",
+                    "width": "72px",
+                    "height": "72px"
+                  },
+                  {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "contents": [
+                          {
+                            "type": "span",
+                            "text": "Date",
+                            "weight": "bold",
+                            "color": "#000000"
+                          },
+                          {
+                            "type": "span",
+                            "text": "     "
+                          },
+                          {
+                            "type": "span",
+                            "text": "23/3/2565 12:52"
+                          }
+                        ],
+                        "size": "sm",
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "contents": [
+                          {
+                            "type": "span",
+                            "text": "Lat",
+                            "weight": "bold",
+                            "color": "#000000"
+                          },
+                          {
+                            "type": "span",
+                            "text": "     "
+                          },
+                          {
+                            "type": "span",
+                            "text": "12.4401216"
+                          }
+                        ],
+                        "size": "sm",
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "contents": [
+                          {
+                            "type": "span",
+                            "text": "Lng",
+                            "weight": "bold",
+                            "color": "#000000"
+                          },
+                          {
+                            "type": "span",
+                            "text": "     "
+                          },
+                          {
+                            "type": "span",
+                            "text": "100.456"
+                          }
+                        ],
+                        "size": "sm",
+                        "wrap": true
+                      },
+                      {
+                        "type": "box",
+                        "layout": "baseline",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "text": "IP Adress : 1.460.12",
+                            "size": "sm",
+                            "color": "#bcbcbc"
+                          }
+                        ],
+                        "spacing": "sm",
+                        "margin": "md"
+                      }
+                    ]
+                  }
+                ],
+                "spacing": "xl",
+                "paddingAll": "20px"
+              }
+            ],
+            "paddingAll": "0px"
+          }
         }
       }
-
 
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([flexful])
@@ -290,7 +292,7 @@
 
 
     async function main() {
-      alert("Demo!!")
+      alert("Demo!!!")
       await liff.init({ liffId: "1656995427-Pn34wo4q" })
       getEnvironment()
       getUserProfile()
