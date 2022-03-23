@@ -75,7 +75,8 @@
 
       const my_json_locate = JSON.parse(myLoc)
 
-      alert(JSON.stringify(my_json_locate.lat, my_json_locate.lng))
+      alert(JSON.stringify(Math.round(my_json_locate.lat)))
+      alert(JSON.stringify(Math.round(my_json_locate.lng)))
 
       const flexful = {
         "type": "flex",
@@ -100,7 +101,7 @@
                         "aspectMode": "cover",
                         "aspectRatio": "150:98",
                         "gravity": "center",
-                        "url": "https://maps.googleapis.com/maps/api/staticmap?center=14.0808974,100.604058&zoom=15&size=400x400&markers=size:mid%7Ccolor:red%7C14.0808974,100.60405&maptype=hybrid&key=AIzaSyDPp1vNSk7TBo9FP7i1QPiB4Qq5tmNtk84"
+                        "url": "https://maps.googleapis.com/maps/api/staticmap?center=14.0808974,100.604058&zoom=15&size=400x400&markers=size:mid%7Ccolor:red%7C14.0808974,100.604058&key=AIzaSyDPp1vNSk7TBo9FP7i1QPiB4Qq5tmNtk84"
                       },
                       {
                         "type": "box",
@@ -302,7 +303,7 @@
 
 
     async function main() {
-      alert("สาธุ0")
+      alert("สาธุ01")
       await liff.init({ liffId: "1656995427-Pn34wo4q" })
       getEnvironment()
       getUserProfile()
