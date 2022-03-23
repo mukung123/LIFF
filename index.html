@@ -200,7 +200,7 @@
                         "contents": [
                           {
                             "type": "text",
-                            "text": "IP Adress : 1.460.12",
+                            "text": "IP Adress : " + myIP,
                             "size": "sm",
                             "color": "#bcbcbc"
                           }
@@ -222,6 +222,7 @@
 
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([flexful])
+        liff.closeWindow()
       }
     }
 
