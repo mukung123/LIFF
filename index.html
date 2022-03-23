@@ -112,7 +112,7 @@
                     "action": {
                       "type": "uri",
                       "label": "action",
-                      "uri": "https://www.google.com/maps/search/?api=1&query=14.0808974%2C100.604058"
+                      "uri": `https://www.google.com/maps/search/?api=1&query=${my_json_locate.lat.toFixed(6)}%2C${my_json_locate.lng.toFixed(6)}`
                     }
                   }
                 ]
@@ -303,7 +303,6 @@
 
 
     async function main() {
-      alert("สาธุ02")
       await liff.init({ liffId: "1656995427-Pn34wo4q" })
       getEnvironment()
       getUserProfile()
