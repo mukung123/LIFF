@@ -75,8 +75,8 @@
 
       const my_json_locate = JSON.parse(myLoc)
 
-      alert(JSON.stringify(Math.round(my_json_locate.lat)))
-      alert(JSON.stringify(Math.round(my_json_locate.lng)))
+      alert(my_json_locate.lat.toFixed(4))
+      alert(my_json_locate.lng.toFixed(4))
 
       const flexful = {
         "type": "flex",
@@ -303,7 +303,7 @@
 
 
     async function main() {
-      alert("สาธุ01")
+      alert("สาธุ02")
       await liff.init({ liffId: "1656995427-Pn34wo4q" })
       getEnvironment()
       getUserProfile()
