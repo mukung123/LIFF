@@ -71,6 +71,7 @@
       const mydate = getDateTime()
       const myLoc = getLocation()
       const myIP = await getIP()
+      const profile = await liff.getProfile()
 
       const myfile = {
         "datetime": mydate,
@@ -117,7 +118,7 @@
                     "contents": [
                       {
                         "type": "image",
-                        "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip13.jpg",
+                        "url": profile.pictureUrl,
                         "aspectMode": "cover",
                         "size": "full"
                       }
@@ -292,7 +293,7 @@
 
 
     async function main() {
-      alert("Demo!!!")
+      alert("Demo!")
       await liff.init({ liffId: "1656995427-Pn34wo4q" })
       getEnvironment()
       getUserProfile()
