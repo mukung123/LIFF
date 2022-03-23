@@ -75,7 +75,7 @@
 
       const myfile = {
         "datetime": mydate,
-        "location": myLoc,
+        "location": JSON.parse(myLoc),
         "IP Adress": myIP
       }
 
@@ -102,9 +102,19 @@
                         "aspectMode": "cover",
                         "aspectRatio": "150:98",
                         "gravity": "center",
-                        "url": "https://maps.googleapis.com/maps/api/staticmap?center=14.081287089777554,100.60466211681727&zoom=14&size=400x400&key=AIzaSyDPp1vNSk7TBo9FP7i1QPiB4Qq5tmNtk84"
+                        "url": `https://maps.googleapis.com/maps/api/staticmap?center=${myfile.location.lat},${myfile.location.lng}&zoom=15&size=400x400&markers=size:mid%7Ccolor:red%7C${myfile.location.lat},${myfile.location.lng}&maptype=hybrid&key=AIzaSyDPp1vNSk7TBo9FP7i1QPiB4Qq5tmNtk84`
+                      },
+                      {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": []
                       }
-                    ]
+                    ],
+                    "action": {
+                      "type": "uri",
+                      "label": "action",
+                      "uri": `https://www.google.com/maps/search/?api=1&query=${myfile.location.lat}%2C${myfile.location.lng}`
+                    }
                   }
                 ]
               },
@@ -146,7 +156,7 @@
                           },
                           {
                             "type": "span",
-                            "text": "23/3/2565 12:52"
+                            "text": mydate
                           }
                         ],
                         "size": "sm",
@@ -167,7 +177,7 @@
                           },
                           {
                             "type": "span",
-                            "text": "12.4401216"
+                            "text": myfile.location.lat
                           }
                         ],
                         "size": "sm",
@@ -188,7 +198,7 @@
                           },
                           {
                             "type": "span",
-                            "text": "100.456"
+                            "text": myfile.location.lng
                           }
                         ],
                         "size": "sm",
